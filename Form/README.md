@@ -71,7 +71,10 @@ ___
     - Type: `{object}`
     - Object containing a list of default status.
     - Options: `default` | `loading`
-### data()
+
+___
+
+### `data()`
 Fetches all relevant data for the Form.
 
 #### @Returns
@@ -81,12 +84,12 @@ Fetches all relevant data for the Form.
 
 ___
 
-### reset()
+### `reset()`
 Resets the Form fields.
 
 ___
 
-### setStatus(name)
+### `setStatus(name)`
 Sets the Form status. If the status name is not contained in the `__status` list, the name will be set as the status.
 
 #### @Params
@@ -96,7 +99,7 @@ Sets the Form status. If the status name is not contained in the `__status` list
 
 ___
 
-### post(url)
+### `post(url)`
 Sends a promise-based POST request to the given URL.
 
 #### @Params
@@ -111,7 +114,7 @@ Sends a promise-based POST request to the given URL.
     
 ___
 
-### put(url)
+### `put(url)`
 Sends a promise-based PUT request to the given URL.
 
 #### @Params
@@ -126,7 +129,7 @@ Sends a promise-based PUT request to the given URL.
 
 ___
 
-### patch(url)
+### `patch(url)`
 Sends a promise-based PATCH request to the given URL.
 
 #### @Params
@@ -141,7 +144,7 @@ Sends a promise-based PATCH request to the given URL.
 
 ___
 
-### delete(url)
+### `delete(url)`
 Sends a promise-based DELETE request to the given URL.
 
 #### @Params
@@ -156,7 +159,7 @@ Sends a promise-based DELETE request to the given URL.
 
 ___
 
-### submit(requestType, url)
+### `submit(requestType, url)`
 Submits the Form through a promise-based ajax request.
 
 #### @Params
@@ -174,7 +177,7 @@ Submits the Form through a promise-based ajax request.
 
 ___
 
-### onSuccess(response)
+### `onSuccess(response)`
 Handles a successful Form submission.
 
 #### @Params
@@ -189,7 +192,7 @@ Handles a successful Form submission.
 
 ___
 
-### onFail(errors)
+### `onFail(errors)`
 Handles a failed Form submission.
 
 #### @Params
@@ -270,4 +273,5 @@ Clear one or all error fields.
     - Type: `{string|false}`
     - Default: `false`
     - A string containing a field name. If `false`, clears all. 
+
 ___

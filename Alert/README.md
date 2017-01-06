@@ -204,3 +204,5 @@ ___
 
 ### `reset()`
 Resets the data from the Alert object.
+
+___
