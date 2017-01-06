@@ -1,0 +1,88 @@
+/**
+*   Form control input
+*
+*   @class     .form-control input
+*/
+& input {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control input font color.
+	*/
+	$color = _shade-l1;
+
+	/**
+	*   Padding
+	*
+	*   @var    $padding  Form control input padding.
+	*/
+	$padding = .50rem 1rem;
+
+	/**
+	*   Border color
+	*
+	*   @var    $border-color  Form control input border color.
+	*/
+	$border-color = _light-d2;
+	$border-color-focus = _primary-l1;
+	$border-color-hover = _primary-l2;
+	$border-color-active = _primary-d1;
+
+	/**
+	*   Border radius
+	*
+	*   @var    $border-radius  Form control input border radius.
+	*/
+	$border-radius = _border-radius;
+
+	/**
+	*   Box shadow color
+	*
+	*   @var    $box-shadow-color  Form control has warning box shadow color.
+	*/
+	$box-shadow-color = $border-color-hover;
+
+	/**
+	*   .form-control input
+	*
+	*   Main style.
+	*/
+	& {
+		z-index 1
+		width 100%
+		cursor text
+		color $color
+		padding $padding
+		border-radius $border-radius
+		border 1px solid $border-color
+	}
+
+	/**
+	*   .form-control:hover
+	*
+	*   Hovered style.
+	*/
+	&:hover {
+		border-color $border-color-hover
+		box-shadow 0 0 2px $box-shadow-color
+	}
+	/**
+	*   .form-control:active
+	*
+	*   Active style.
+	*/
+	&:active {
+		border-color $border-color-active
+	}
+
+	/**
+	*   .form-control:focus
+	*
+	*   Focused style.
+	*/
+	&:focus {
+		border-color $border-color-focus
+	}
+
+}

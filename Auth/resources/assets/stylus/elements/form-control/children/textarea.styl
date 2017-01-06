@@ -1,0 +1,90 @@
+/**
+*   Form control textarea
+*
+*   @class     .form-control textarea
+*/
+& textarea {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control textarea font color.
+	*/
+	$color = _shade-l1;
+
+	/**
+	*   Padding
+	*
+	*   @var    $padding  Form control textarea padding.
+	*/
+	$padding = 1rem;
+
+	/**
+	*   Border color
+	*
+	*   @var    $border-color  Form control textarea border color.
+	*/
+	$border-color = _light-d2;
+	$border-color-focus = _primary-l1;
+	$border-color-hover = _primary-l2;
+	$border-color-active = _primary-d1;
+
+	/**
+	*   Border radius
+	*
+	*   @var    $border-radius  Form control textarea border radius.
+	*/
+	$border-radius = _border-radius;
+
+	/**
+	*   Box shadow color
+	*
+	*   @var    $box-shadow-color  Form control has warning box shadow color.
+	*/
+	$box-shadow-color = $border-color-hover;
+
+	/**
+	*   .form-control textarea
+	*
+	*   Main style.
+	*/
+	& {
+		z-index 1
+		width 100%
+		cursor text
+		color $color
+		overflow hidden
+		line-height 1.5
+		padding $padding
+		border-radius $border-radius
+		border 1px solid $border-color
+	}
+
+	/**
+	*   .form-control:hover
+	*
+	*   Hovered style.
+	*/
+	&:hover {
+		border-color $border-color-hover
+		box-shadow 0px 0px 2px $box-shadow-color
+	}
+	/**
+	*   .form-control:active
+	*
+	*   Active style.
+	*/
+	&:active {
+		border-color $border-color-active
+	}
+
+	/**
+	*   .form-control:focus
+	*
+	*   Focused style.
+	*/
+	&:focus {
+		border-color $border-color-focus
+	}
+
+}

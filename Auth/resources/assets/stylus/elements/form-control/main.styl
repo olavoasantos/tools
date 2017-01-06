@@ -1,0 +1,112 @@
+/**
+*   Form control
+*
+*   All generic form controls, designed for consistency.
+*
+*   @class     .form-control
+*   @children  icon, input, textarea, action
+*   @states    error, warning, success
+*   @mutators  disabled
+*/
+.form-control {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control font color.
+	*/
+	$color = _shade-l1;
+
+	/**
+	*   Padding
+	*
+	*   @var    $padding  Form control padding.
+	*/
+	$padding = 0 .50rem;
+
+	/**
+	*   Font size
+	*
+	*   @var    $font-size  Form control font size.
+	*/
+	$font-size = _size-small;
+
+	/**
+	*   Background color
+	*
+	*   @var    $background-color  Form control background color.
+	*/
+	$background-color = _light-l2;
+
+	/**
+	*   .form-control
+	*
+	*   Main style.
+	*/
+	& {
+		cursor text
+		display flex
+		color $color
+		margin 1.50rem 0
+		user-select none
+		position relative
+		align-content center
+		justify-content left
+	}
+
+	/**
+	*   .form-control[data-label]
+	*
+	*   Form label style
+	*/
+	&[data-label]:before {
+		z-index 2
+		top -.45rem
+		left .50rem
+		padding $padding
+		position absolute
+		font-size $font-size
+		content attr(data-label)
+		background-color $background-color
+	}
+
+	/**
+	*   .form-control[data-message]
+	*
+	*   Form message style
+	*/
+	&[data-message]:after {
+		z-index 2
+		right .50rem
+		bottom -.45rem
+		padding $padding
+		position absolute
+		font-size $font-size
+		content attr(data-message)
+		background-color $background-color
+	}
+
+	/**
+	*   Children
+	*/
+	@import "children/icon.styl";
+	@import "children/input.styl";
+	@import "children/search.styl";
+	@import "children/select.styl";
+	@import "children/action.styl";
+	@import "children/textarea.styl";
+	@import "children/inputRange.styl";
+
+	/**
+	*   States
+	*/
+	@import "states/error.styl";
+	@import "states/success.styl";
+	@import "states/warning.styl";
+
+	/**
+	*   Mutators
+	*/
+	@import "mutators/disabled.styl";
+
+}

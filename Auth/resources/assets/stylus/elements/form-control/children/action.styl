@@ -1,0 +1,79 @@
+/**
+*   Form control action
+*
+*   @class     .form-control .action
+*/
+& .action {
+
+	/**
+	*   Padding
+	*
+	*   @var    $padding  Form control action padding.
+	*/
+	$padding = 0 .25rem;
+
+	/**
+	*   Margin
+	*
+	*   @var    $margin-*  Form control action margin top.
+	*/
+	$margin-right = .25rem;
+
+	/**
+	*   Border radius
+	*
+	*   @var    $border-radius  Form control action border radius.
+	*/
+	$border-radius = _border-radius-small;
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control action font color.
+	*/
+	$color = _shade-l2;
+
+	/**
+	*   Background color
+	*
+	*   @var    $background-color-*  Form control action background color.
+	*/
+	$background-color-hover = _light-d2;
+
+	/**
+	*   .form-control .action
+	*
+	*   Main style.
+	*/
+	& {
+		right 0
+		z-index 3
+		color $color
+		cursor pointer
+		padding $padding
+		position absolute
+		align-self center
+		margin-right $margin-right
+		border-radius $border-radius
+	}
+
+	/**
+	*   .form-control .action:hover
+	*
+	*   Hovered style.
+	*/
+	&:hover {
+		background-color $background-color-hover
+	}
+
+	/**
+	*   .form-control .action[data-icon]:before
+	*
+	*   Displays FontAwesome icons when passed through data-icon attribute.
+	*/
+	&[data-icon]:before {
+		content attr(data-icon)
+		font-family "FontAwesome"
+	}
+
+}

@@ -1,0 +1,30 @@
+/**
+*   Form control has errors
+*
+*   @class     .form-control.has-error
+*/
+&.has-error {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control has error font color.
+	*/
+	$color = _red-d1;
+
+	/**
+	*   .form-control.has-error
+	*
+	*   Main style.
+	*/
+	&, & .icon, & .action {
+		color $color
+		user-select none
+	}
+
+	/**
+	*   Children
+	*/
+	@import "error-children/input.styl";
+
+}

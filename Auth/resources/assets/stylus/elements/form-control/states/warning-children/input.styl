@@ -1,0 +1,43 @@
+/**
+*   Form control has warning input
+*
+*   @class     .form-control.has-warning input
+*/
+& input {
+
+	/**
+	*   Border color
+	*
+	*   @var    $border-color-*  Form control has warning border color.
+	*/
+	$border-color = _yellow-d1;
+	$border-color-hover = _yellow;
+
+	/**
+	*   Box shadow color
+	*
+	*   @var    $box-shadow-color  Form control has warning box shadow color.
+	*/
+	$box-shadow-color = $border-color-hover;
+
+	/**
+	*   .form-control.has-warning input
+	*
+	*   Main style.
+	*/
+	& {
+		user-select none
+		border-color $border-color
+	}
+
+	/**
+	*   .form-control.has-warning input:hover
+	*
+	*   Hovered style.
+	*/
+	&:hover {
+		border-color $border-color-hover
+		box-shadow 0px 0px 2px $box-shadow-color
+	}
+
+}

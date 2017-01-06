@@ -1,0 +1,134 @@
+/**
+*   Form control input
+*
+*   @class     .form-control input
+*/
+& input[type=search] {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control input font color.
+	*/
+	$color = _white;
+	$color-hover = _light-d1;
+	$color-active = _light;
+	$color-focus = _light-l2;
+
+	/**
+	*   Padding
+	*
+	*   @var    $padding  Form control input padding.
+	*/
+	$padding = .50rem 1rem;
+
+	/**
+	*   Background color
+	*
+	*   @var    $background-color  Form control input background color.
+	*/
+	$background-color = _white;
+	$background-color-focus = white;
+	$background-color-hover = _white;
+	$background-color-active = _white;
+
+	/**
+	*   Border radius
+	*
+	*   @var    $border-radius  Form control input border radius.
+	*/
+	$border-radius = _border-radius;
+
+	/**
+	*   Box shadow color
+	*
+	*   @var    $box-shadow-color  Form control has warning box shadow color.
+	*/
+	$box-shadow-color = $background-color-hover;
+
+	/**
+	*   .form-control input
+	*
+	*   Main style.
+	*/
+	& {
+		z-index 1
+		width 100%
+		border none
+		cursor text
+		color $color
+		padding $padding
+		transition all .2s
+		border-radius $border-radius
+		background rgba($background-color, .2)
+	}
+
+	/**
+	*   .form-control:hover
+	*
+	*   Hovered style.
+	*/
+	&:hover {
+		border none
+		color $color-hover
+		box-shadow 0 0 2px $box-shadow-color
+		background rgba($background-color-hover, .5)
+
+		& + .action {
+			color $color-hover
+		}
+	}
+	/**
+	*   .form-control:active
+	*
+	*   Active style.
+	*/
+	&:active {
+		color $color-active
+		background rgba($background-color-active, .7)
+
+		& + .action {
+			color $color-active
+		}
+	}
+
+	/**
+	*   .form-control:focus
+	*
+	*   Focused style.
+	*/
+	&:focus {
+		color $color-focus
+		background rgba($background-color-focus, .5)
+
+		& + .action {
+			color $color-focus
+		}
+	}
+
+	/**
+	*   .form-control input::placeholder
+	*
+	*   It sets the style for :placeholder selector.
+	*/
+	&::placeholder {
+		color currentColor
+	}
+
+	/**
+	*   .form-control input::-webkit-search-cancel-button
+	*
+	*   It sets the style for ::-webkit-search-cancel-button selector.
+	*/
+	&::-webkit-search-cancel-button {
+		display none
+	}
+	&::-ms-clear {
+		display none
+	}
+
+	& + .action {
+		color $color
+	}
+
+}

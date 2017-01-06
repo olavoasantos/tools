@@ -1,0 +1,124 @@
+/**
+*   Modal
+*
+*   A classic modal overlay, in which you can include any content you want.
+*
+*   @class     .modal
+*   @children
+*   @states
+*   @mutators
+*/
+.modal {
+
+  /**
+  *   .modal
+  *
+  *   It sets the main style for Modal.
+  */
+  & {
+    top 50%
+    left 50%
+    opacity 0
+    width 100%
+    z-index 150
+    max-width 50%
+    max-height 90%
+    position fixed
+    overflow hidden
+    user-select none
+    visibility hidden
+    transition all .2s
+    background _light-l2
+    box-shadow 0 0 .5rem _black
+    border-radius _border-radius
+    transform translate(-50%, -50%)
+    display flex
+    flex-direction column
+
+    +below('l') {
+      max-width 75%
+    }
+
+    +below('xs') {
+      height 100vh
+      max-width 100vw
+      max-height 100vh
+    }
+  }
+
+  /**
+  *   Children
+  */
+  & .header {
+    & {
+      padding 2rem 1rem
+      background _shade
+      text-align center
+    }
+
+    & .title {
+      font-family _font-family-title
+      font-size _size-5
+      color _light-d2
+      font-weight _weight-title-normal
+    }
+  }
+
+  & .content {
+    & {
+      padding 2rem
+      overflow auto
+      max-height 100%
+
+      +below('s') {
+        flex 1
+      }
+    }
+  }
+
+  & .footer {
+    & {
+      display flex
+      justify-content space-between
+      background-color _light
+
+      +below('s') {
+        height 4rem
+      }
+    }
+
+    & .item {
+      width 100%
+      text-align center
+      padding 1.5rem 0
+    }
+
+    & .item.action {
+      cursor pointer
+
+      &:hover {
+        background _light-d1
+      }
+
+      &.is-disabled {
+        cursor default
+        opacity .5
+
+        &:hover {
+          background none
+        }
+      }
+    }
+  }
+
+  /**
+  *   Mutators
+  */
+  &.is-visible {
+    & {
+      opacity 1
+      visibility visible
+    }
+  }
+
+}

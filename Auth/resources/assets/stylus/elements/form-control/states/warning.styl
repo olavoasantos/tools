@@ -1,0 +1,37 @@
+/**
+*   Form control has warning
+*
+*   @class     .form-control.has-warning
+*/
+&.has-warning {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control has warning font color.
+	*/
+	$color = _yellow-d1;
+
+	/**
+	*   Border color
+	*
+	*   @var    $border-color  Form control has warning border color.
+	*/
+	$border-color = _yellow-d1;
+
+	/**
+	*   .form-control.has-warning
+	*
+	*   Main style.
+	*/
+	&, & .icon, & .action {
+		color $color
+		user-select none
+	}
+
+	/**
+	*   Children
+	*/
+	@import "warning-children/input.styl";
+
+}

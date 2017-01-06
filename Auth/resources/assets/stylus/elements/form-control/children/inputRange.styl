@@ -1,0 +1,166 @@
+/**
+*   Form control input
+*
+*   @class     .form-control input
+*/
+& input[type=range] {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control input font color.
+	*/
+	$color = _shade-l1
+
+	/**
+	*   Padding
+	*
+	*   @var    $padding  Form control input padding.
+	*/
+	$padding = .50rem 1rem
+
+	/**
+	*   Border color
+	*
+	*   @var    $border-color  Form control input border color.
+	*/
+	$border-color = _light-d2
+	$border-color-focus = _primary-l1
+	$border-color-hover = _primary-l2
+	$border-color-active = _primary-d1
+	$border-color-slider-thumb = _primary
+
+	/**
+	*   Border radius
+	*
+	*   @var    $border-radius  Form control input border radius.
+	*/
+	$border-radius = _border-radius
+	$border-radius-slider-track = _border-radius-small
+	$border-radius-slider-thumb = _border-radius-circle
+
+	/**
+	*   Box shadow color
+	*
+	*   @var    $box-shadow-color  Form control has warning box shadow color.
+	*/
+	$box-shadow-color = $border-color-hover
+
+	/**
+	*   It sets the property style for background
+	*
+	*   @prop    background
+	*/
+	$background-color-slider-track = _light-d2;
+	$background-color-slider-thumb = _primary-l2;
+
+	/**
+	*   .form-control input[type=range]
+	*
+	*   Main style.
+	*/
+	& {
+		z-index 1
+		width 100%
+		color $color
+		cursor pointer
+		appearance none
+		padding $padding
+		border-radius $border-radius
+		border 1px solid $border-color
+	}
+
+	/**
+	*   .form-control input[type=range]:hover
+	*
+	*   Hovered style.
+	*/
+	&:hover {
+		border-color #000
+		box-shadow 0 0 2px $box-shadow-color
+	}
+	/**
+	*   .form-control input[type=range]:active
+	*
+	*   Active style.
+	*/
+	&:active {
+		border-color $border-color-active
+	}
+
+	/**
+	*   .form-control input[type=range]:focus
+	*
+	*   Focused style.
+	*/
+	&:focus {
+		border-color $border-color-focus
+	}
+
+	/**
+	*   .form-control input[type=range]::-webkit-slider-runnable-track
+	*
+	*   It sets the style for ::-webkit-slider-runnable-track selector.
+	*/
+	slider-runnable-track() {
+		width 100%
+		height .5rem
+		cursor pointer
+		margin .5rem 0
+		background $background-color-slider-track
+		border-radius $border-radius-slider-track
+	}
+	/**
+	*   Chrome
+	*/
+	&::-webkit-slider-runnable-track {
+		slider-runnable-track()
+	}
+	/**
+	*   Firefox
+	*/
+	&::-mox-slider-runnable-track {
+		slider-runnable-track()
+	}
+	/**
+	*   iE
+	*/
+	&::-ms-slider-runnable-track {
+		slider-runnable-track()
+	}
+
+	/**
+	*   .form-control input[type=range]::-webkit-slider-thumb
+	*
+	*   It sets the style for ::-webkit-slider-thumb selector.
+	*/
+	slider-thumb() {
+		width 18px
+		height 18px
+		cursor pointer
+		margin-top -5px
+		-webkit-appearance none
+		background $background-color-slider-thumb
+		border-radius $border-radius-slider-thumb
+		border 1px solid $border-color-slider-thumb
+	}
+	/**
+	*   Chrome
+	*/
+	&::-webkit-slider-thumb {
+		slider-thumb()
+	}
+	/**
+	*   Firefox
+	*/
+	&::-mox-slider-thumb {
+		slider-thumb()
+	}
+	/**
+	*   iE
+	*/
+	&::-ms-slider-thumb {
+		slider-thumb()
+	}
+
+}

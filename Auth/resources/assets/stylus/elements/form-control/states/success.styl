@@ -1,0 +1,37 @@
+/**
+*   Form control has success
+*
+*   @class     .form-control.has-success
+*/
+&.has-success {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control has success font color.
+	*/
+	$color = _green-d1;
+
+	/**
+	*   Border color
+	*
+	*   @var    $border-color  Form control has success border color.
+	*/
+	$border-color = _green-d1;
+
+	/**
+	*   .form-control.has-success
+	*
+	*   Main style.
+	*/
+	&, & .icon, & .action {
+		color $color
+		user-select none
+	}
+
+	/**
+	*   Children
+	*/
+	@import "success-children/input.styl";
+
+}

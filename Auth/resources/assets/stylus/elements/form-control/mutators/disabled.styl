@@ -1,0 +1,41 @@
+/**
+*   Form control is disabled
+*
+*   @class     .form-control.is-disabled
+*/
+&.is-disabled {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color-*  Form control is disabled font color.
+	*/
+	$color = _shade-l2;
+	$color-hover = $color;
+
+	/**
+	*   Border color
+	*
+	*   @var    $border-color-*  Form control is disabled border color.
+	*/
+	$border-color = _shade-l2;
+	$border-color-hover = $border-color;
+
+	/**
+	*   .form-control
+	*
+	*   Main style.
+	*/
+	&, & .icon, & .action, & input {
+		opacity .7
+		color $color
+		user-select none
+		border-color $border-color
+		&:hover {
+			cursor default
+			color $color-hover
+			border-color $border-color-hover
+		}
+	}
+
+}

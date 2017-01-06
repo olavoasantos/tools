@@ -1,0 +1,64 @@
+/**
+*   Form control icon
+*
+*   @class     .form-control .icon
+*/
+& .icon {
+
+	/**
+	*   Font color
+	*
+	*   @var    $color  Form control icon font color.
+	*/
+	$color = _shade-l2;
+
+	/**
+	*   Padding
+	*
+	*   @var    $padding-*  Form control icon padding.
+	*/
+	$padding = 0 1rem;
+	$padding-input = .50rem 2.5rem;
+	$padding-textarea = 1rem 2.5rem;
+
+	/**
+	*   .form-control .icon
+	*
+	*   Main style.
+	*/
+	& {
+		color $color
+		padding $padding
+		position absolute
+		align-self center
+	}
+
+	/**
+	*   .form-control .icon[data-icon]:before
+	*
+	*   Displays FontAwesome icons when passed through data-icon attribute.
+	*/
+	&[data-icon]:before {
+		content attr(data-icon)
+		font-family "FontAwesome"
+	}
+
+	/**
+	*   .form-control .icon + input
+	*
+	*   Padding correction on input to include icon.
+	*/
+	& + input, & + select {
+		padding $padding-input
+	}
+
+	/**
+	*   .form-control .icon + textarea
+	*
+	*   Padding correction on textarea to include icon.
+	*/
+	& + textarea {
+		padding $padding-textarea
+	}
+
+}
