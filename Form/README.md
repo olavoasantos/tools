@@ -50,10 +50,13 @@ v0.1
     - Type: `{FormErrors}`
     - A FormError instace containing the Form's errors.
 ___
+
 - `status`
     - Type: `{string}`
     - A string containing the Forms status.
+
 ___
+
 ##### Internal parameters
 - `__data`
     - Type: `{object}`
@@ -61,31 +64,38 @@ ___
     
     \*\* This data is accessible through `Form[{param}]`.
 ___
+
 - `__status`
     - Type: `{object}`
     - Object containing a list of default status.
     - Options: `default` | `loading`
 ### data()
 Fetches all relevant data for the Form.
+
 #### @Returns
 - `$data`
     - Type: `{Object}`
     - Object containing the relevant information from the form.
 
 ___
+
 ### reset()
 Resets the Form fields.
 
 ___
+
 ### setStatus(name)
 Sets the Form status. If the status name is not contained in the `__status` list, the name will be set as the status.
+
 #### @Params
 - `name`
     - Type: `{string}`
     - A string containing the status name.
 ___
+
 ### post(url)
 Sends a promise-based POST request to the given URL.
+
 #### @Params
  - `url`
     - Type: `{string}`
@@ -97,8 +107,10 @@ Sends a promise-based POST request to the given URL.
     - A promise with the response data from the server.    
     
 ___
+
 ### put(url)
 Sends a promise-based PUT request to the given URL.
+
 #### @Params
  - `url`
     - Type: `{string}`
@@ -110,8 +122,10 @@ Sends a promise-based PUT request to the given URL.
     - A promise with the response data from the server.
 
 ___
+
 ### patch(url)
 Sends a promise-based PATCH request to the given URL.
+
 #### @Params
  - `url`
     - Type: `{string}`
@@ -123,8 +137,10 @@ Sends a promise-based PATCH request to the given URL.
     - A promise with the response data from the server.
 
 ___
+
 ### delete(url)
 Sends a promise-based DELETE request to the given URL.
+
 #### @Params
  - `url`
     - Type: `{string}`
@@ -136,8 +152,10 @@ Sends a promise-based DELETE request to the given URL.
     - A promise with the response data from the server.
 
 ___
+
 ### submit(requestType, url)
 Submits the Form through a promise-based ajax request.
+
 #### @Params
 - `requestType`
     - Type: `{string}`
@@ -152,8 +170,10 @@ Submits the Form through a promise-based ajax request.
     - A promise with the response data from the server.
 
 ___
+
 ### onSuccess(response)
 Handles a successful Form submission.
+
 #### @Params
 - `response`
     - Type: `{mixed}`
@@ -165,8 +185,10 @@ Handles a successful Form submission.
     - An object containing the server response.
 
 ___
+
 ### onFail(errors)
 Handles a failed Form submission.
+
 #### @Params
 - `errors`
     - Type: `{object}`
@@ -188,10 +210,12 @@ ___
 
 ### `has(field)`
 Determine if an errors exists for the given field.
+
 #### @Params
 - `field`
     - Type: `{string}`
     - A string containing the field name.
+    
 #### @Returns
 - `$boolean`
     - Type: `{boolean}`
@@ -201,6 +225,7 @@ ___
 
 ### `any()`
 Determine if we have any errors.
+
 #### @Returns
 - `$boolean`
     - Type: `{boolean}`
@@ -209,6 +234,7 @@ ___
 
 ### `get(field)`
 Retrieve the error message for a field.
+
 #### @Params
 - `field`
     - Type: `{string}`
@@ -222,6 +248,7 @@ ___
 
 ### `push(errors)`
 Pushes the new errors.
+
 #### @Params
 - `errors`
     - Type: `{object}`
@@ -231,6 +258,7 @@ ___
 
 ### `clear(field)`
 Clear one or all error fields.
+
 #### @Params
 - `field`
     - Type: `{string|false}`

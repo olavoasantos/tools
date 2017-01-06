@@ -55,13 +55,18 @@ v0.1
 - `__alerts`
     - Type: `{array}`
     - An array containing a list of fired Alert objects.
+
 ___
+
 - `__data`
     - Type: `{object}`
     - An object containing the data of an unfired Alert.
+
 ___
+
 ### `hightlight(body)`
 Sets the highlight text for the Alert.
+
 #### @Params
 - `body`
     - Type: `{string}`
@@ -73,8 +78,10 @@ Sets the highlight text for the Alert.
     - Returns itself (for fluency sake).
 
 ___
+
 ### `message(body)`
 Sets the message text for the Alert.
+
 #### @Params
 - `body`
     - Type: `{string}`
@@ -86,8 +93,10 @@ Sets the message text for the Alert.
     - Returns itself (for fluency sake).
     
 ___
+
 ### `type(string)`
 Sets the type for the Alert.
+
 #### @Params
 - `string`
     - Type: `{string}`
@@ -100,8 +109,10 @@ Sets the type for the Alert.
     - Returns itself (for fluency sake).
     
 ___
+
 ### `icon(code)`
 Sets the icon for the Alert.
+
 #### @Params
 - `code`
     - Type: `{string}`
@@ -114,8 +125,10 @@ Sets the icon for the Alert.
     - Returns itself (for fluency sake).
 
 ___
+
 ### `fire(alert)`
 Fires the new Alert.
+
 #### @Params
 - `alert`
     - Type: `{object}`
@@ -123,57 +136,71 @@ Fires the new Alert.
     - Object with the new Alert data. If is `null`, the stored data is pushed.
 
 ___
+
 ### `flash(message)`
 It fires a default Alert.
+
 #### @Params
 - `message`
     - Type: `{string}`
     - A string containing the Alert message.
 
 ___
+
 ### `error(message)`
 It fires an error Alert.
+
 #### @Params
 - `message`
     - Type: `{string}`
     - A string containing the Alert message.
     
 ___
+
 ### `success(message)`
 It fires a success Alert.
+
 #### @Params
 - `message`
     - Type: `{string}`
     - A string containing the Alert message.
 
 ___
+
 ### `warning(message)`
 It fires a warning Alert.
+
 #### @Params
 - `message`
     - Type: `{string}`
     - A string containing the Alert message.
     
 ___
+
 ### `info(message)`
 It fires an info Alert.
+
 #### @Params
 - `message`
     - Type: `{string}`
     - A string containing the Alert message.
 
 ___
+
 ### `all()`
 Fetches all the stored alerts.
+
 #### @Returns
 - `$alerts`
     - Type: `{object}`
     - An object containing all the alerts pushed.
     
 ___
+
 ### `clear()`
 Clears all the stored alerts.
 
 ___
+
 ### `reset()`
 Resets the data from the Alert object.
