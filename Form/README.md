@@ -49,6 +49,7 @@ v0.1
 - `errors`
     - Type: `{FormErrors}`
     - A FormError instace containing the Form's errors.
+
 ___
 
 - `status`
@@ -63,6 +64,7 @@ ___
     - Object containing the Forms data.
     
     \*\* This data is accessible through `Form[{param}]`.
+
 ___
 
 - `__status`
@@ -91,6 +93,7 @@ Sets the Form status. If the status name is not contained in the `__status` list
 - `name`
     - Type: `{string}`
     - A string containing the status name.
+
 ___
 
 ### post(url)
@@ -206,6 +209,7 @@ ___
 - `errors`
     - Type: `{object}`
     - An object containing a list of errors.
+
 ___
 
 ### `has(field)`
@@ -230,6 +234,7 @@ Determine if we have any errors.
 - `$boolean`
     - Type: `{boolean}`
     - Returns `true` if there are Errors; `false` if there aren't.
+
 ___
 
 ### `get(field)`
@@ -244,6 +249,7 @@ Retrieve the error message for a field.
 - `$error`
     - Type: `{object}`
     - If existent, it returns an object with the error.
+
 ___
 
 ### `push(errors)`
