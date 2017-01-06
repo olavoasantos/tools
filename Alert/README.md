@@ -24,6 +24,7 @@
 
 ## Installation
 > Installation on Laravel project.
+
 - Add to `./composer.json`:
 ```json
     {
