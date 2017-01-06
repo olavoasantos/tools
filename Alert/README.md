@@ -1,10 +1,15 @@
 # Alert system
-v0.1
+> v0.1
 
 ## Requires
 - Vue.js
+
+#### Recommended
+- Laravel
 - Stylus (+Rupture)
 - BMD nucleus
+
+> Stylus & BMD nucleus correspond to my styling workflow and are not required. If you wish to use it without these, remove the `./resources/assets/stylus` folder entirely.
 
 ## Usage
 ### Back-end
@@ -18,6 +23,7 @@ v0.1
 ```
 
 ## Installation
+> Installation on Laravel project.
 - Add to `./composer.json`:
 ```json
     {
@@ -34,6 +40,7 @@ v0.1
         @include('components.alert')
     </alert-controller>
 ```
+> Check out `./resources/views/components/alert.blade.php` for details on the included code.
 
 - Add to `./resources/assets/js/app.js`:
 ```javascript

@@ -1,12 +1,18 @@
 # User Auth system
-v0.1
+> v0.1
 
 ## Requires
 - Laravel
 - Vue.js
-- Axios
-- Alert system (check docs for installation instructions)
-- Form system (check docs for installation instructions)
+- Alert system (check docs for installation instructions / dependencies)
+- Form system (check docs for installation instructions / dependencies)
+
+#### Recommended
+- Stylus (+Rupture)
+- BMD nucleus
+
+> Stylus & BMD nucleus correspond to my styling workflow and are not required. If you wish to use it without these, remove the `./resources/assets/stylus` folder entirely.
+
 
 ## Usage
 - To login, add to your view:
@@ -24,18 +30,18 @@ v0.1
 - Add to `./vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php`:
 ```php
     /**
-         * The user has been authenticated.
-         *
-         * @param  \Illuminate\Http\Request  $request
-         * @param  mixed  $user
-         * @return mixed
-         */
-        protected function authenticated(Request $request, $user)
-        {
-    	    if($request->ajax()) {
-    		    return response('success');
-    	    }
+     * The user has been authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+     protected function authenticated(Request $request, $user)
+     {
+        if($request->ajax()) {
+     	    return response('success');
         }
+     }
 ```
 
 - Add to `./vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php`:
