@@ -1,13 +1,12 @@
-# Form system
-v0.1
+# My Tools
+Just some tools I made. This is just a way to re-use them in my projects.
+Not the smartest way, I know. But it's my way.
 
-## Requires
+## List
+- Alert
+- Form
+
+## General requirements
 - Laravel
-- Axios
-
-## Usage
-- Add to `./resources/assets/js/app.js`:
-```ecmascript 6
-    import Form from "./Core/Form/Form";
-    window.Form = Form;
-```
+- Vue.js
+- Stylus (+Rupture)

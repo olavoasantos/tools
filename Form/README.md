@@ -7,7 +7,7 @@ v0.1
 
 ## Usage
 - Add to `./resources/assets/js/app.js`:
-```ecmascript 6
+```javascript
     import Form from "./Core/Form/Form";
     window.Form = Form;
 ```

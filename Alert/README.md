@@ -26,7 +26,7 @@ v0.1
 ```
 
 - Add to `./resources/assets/js/app.js`:
-```ecmascript 6
+```javascript
     import Alert from "./Core/Alert/Alert";
     Vue.prototype.$alert = new Alert;
     
