@@ -2,7 +2,6 @@
 v0.1
 
 ## Requires
-- Laravel
 - Axios
 
 ## Usage
