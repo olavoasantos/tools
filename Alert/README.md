@@ -23,7 +23,7 @@ v0.1
 ```json
     {
       "autoload": {
-        "files": [ "app/Helpers/Flash.php" ]
+        "files": [ "app/Helpers/Alert.php" ]
       }
     }
 ```
@@ -48,7 +48,18 @@ v0.1
     Vue.component('alert', require('./BMD/Molecules/Alert/main.vue')); 
 ```
 
-## Docs
+# Docs
+## class `Alert`
+### Parameters
+##### Internal parameters
+- `__alerts`
+    - Type: `{array}`
+    - An array containing a list of fired Alert objects.
+___
+- `__data`
+    - Type: `{object}`
+    - An object containing the data of an unfired Alert.
+___
 ### `hightlight(body)`
 Sets the highlight text for the Alert.
 #### @Params
@@ -103,8 +114,8 @@ Sets the icon for the Alert.
     - Returns itself (for fluency sake).
 
 ___
-### `push(alert)`
-Pushes the new Alert.
+### `fire(alert)`
+Fires the new Alert.
 #### @Params
 - `alert`
     - Type: `{object}`
@@ -113,7 +124,7 @@ Pushes the new Alert.
 
 ___
 ### `flash(message)`
-It pushes a default Alert.
+It fires a default Alert.
 #### @Params
 - `message`
     - Type: `{string}`
@@ -121,7 +132,7 @@ It pushes a default Alert.
 
 ___
 ### `error(message)`
-It pushes an error Alert.
+It fires an error Alert.
 #### @Params
 - `message`
     - Type: `{string}`
@@ -129,7 +140,7 @@ It pushes an error Alert.
     
 ___
 ### `success(message)`
-It pushes a success Alert.
+It fires a success Alert.
 #### @Params
 - `message`
     - Type: `{string}`
@@ -137,7 +148,7 @@ It pushes a success Alert.
 
 ___
 ### `warning(message)`
-It pushes a warning Alert.
+It fires a warning Alert.
 #### @Params
 - `message`
     - Type: `{string}`
@@ -145,7 +156,7 @@ It pushes a warning Alert.
     
 ___
 ### `info(message)`
-It pushes an info Alert.
+It fires an info Alert.
 #### @Params
 - `message`
     - Type: `{string}`

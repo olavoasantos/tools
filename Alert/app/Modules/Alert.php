@@ -1,7 +1,7 @@
 <?php
 	namespace App\Modules;
 
-	class Flash
+	class Alert
 	{
 
 		/**

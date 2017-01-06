@@ -6,7 +6,7 @@ class Alert {
     constructor() {
         this.__alerts = [];
 
-        this.data = {
+        this.__data = {
             highlight: '',
             message: '',
             icon: 'info',
@@ -20,7 +20,7 @@ class Alert {
      * @param highlight
      */
     highlight(highlight) {
-        this.data['highlight'] = highlight;
+        this.__data['highlight'] = highlight;
 
         return this;
     }
@@ -31,7 +31,7 @@ class Alert {
      * @param message
      */
     message(message) {
-        this.data['message'] = message;
+        this.__data['message'] = message;
 
         return this;
     }
@@ -42,7 +42,7 @@ class Alert {
      * @param type
      */
     type(type) {
-        this.data['type'] = type;
+        this.__data['type'] = type;
 
         return this;
     }
@@ -53,27 +53,27 @@ class Alert {
      * @param icon
      */
     icon(icon) {
-        this.data['icon'] = icon;
+        this.__data['icon'] = icon;
 
         return this;
     }
 
     /**
-     * Pushes the new alert.
+     * Fires the new alert.
      *
      * @param alert
      */
-    push(alert = null) {
+    fire(alert = null) {
         if(alert !== null) {
             this.__alerts.push(alert);
         } else {
-            this.__alerts.push(this.data);
+            this.__alerts.push(this.__data);
         }
         this.reset();
     }
 
     /**
-     * Pushes an alert.
+     * Fires an alert.
      *
      * @param message
      */
@@ -82,11 +82,11 @@ class Alert {
         this.icon('bell');
         this.type('primary');
         this.highlight('');
-        this.push();
+        this.fire();
     }
 
     /**
-     * Pushes an error alert.
+     * Fires an error alert.
      *
      * @param message
      */
@@ -95,11 +95,11 @@ class Alert {
         this.icon('exclamation');
         this.type('danger');
         this.highlight('Error!');
-        this.push();
+        this.fire();
     }
 
     /**
-     * Pushes an success alert.
+     * Fires an success alert.
      *
      * @param message
      */
@@ -108,11 +108,11 @@ class Alert {
         this.icon('check');
         this.type('success');
         this.highlight('Yay!');
-        this.push();
+        this.fire();
     }
 
     /**
-     * Pushes an warning alert.
+     * Fires an warning alert.
      *
      * @param message
      */
@@ -121,11 +121,11 @@ class Alert {
         this.icon('exclamation-triangle');
         this.type('warning');
         this.highlight('Hey!');
-        this.push();
+        this.fire();
     }
 
     /**
-     * Pushes an info alert.
+     * Fires an info alert.
      *
      * @param message
      */
@@ -134,14 +134,14 @@ class Alert {
         this.icon('info');
         this.type('info');
         this.highlight('Hey!');
-        this.push();
+        this.fire();
     }
 
     /**
      * Resets the Alert.
      */
     reset() {
-        this.data = {
+        this.__data = {
             highlight: '',
             message: '',
             icon: 'info',
