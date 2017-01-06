@@ -1,0 +1,31 @@
+/**
+*   Danger
+*
+*   @class     &.is-danger
+*/
+&.is-danger {
+
+  /**
+  *   &.is-danger
+  *
+  *   Main style.
+  */
+  & {
+    background-color _red
+  }
+
+  /**
+  *   .is-danger:hover
+  *
+  *   Hovered style
+  */
+  &:hover {
+    box-shadow 0 0 10px _red
+  }
+
+  /**
+  *   Children
+  */
+  @import "isDanger-children/iconWrapper.styl";
+
+}

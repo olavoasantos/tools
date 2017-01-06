@@ -1,0 +1,45 @@
+/**
+*   Icon wrapper
+*
+*   @class     .icon-wrapper
+*/
+& .alert-icon {
+
+  /**
+  *   padding
+  *
+  *   @var    $padding  Icon wrapper padding.
+  */
+  $padding = .25rem 2rem;
+
+  /**
+  *   Font size
+  *
+  *   @var    $font-size  Icon wrapper font size.
+  */
+  $font-size = _size-medium;
+
+  /**
+  *   Background color
+  *
+  *   @var    $background-color  Icon wrapper background color.
+  */
+  $background-color = _primary-d2;
+
+  /**
+  *   .icon-wrapper
+  *
+  *   Main style.
+  */
+  & {
+    display flex
+    min-width 2rem
+    min-height 4rem
+    padding $padding
+    align-items center
+    font-size $font-size
+    justify-content center
+    background-color $background-color
+  }
+
+}

@@ -1,0 +1,36 @@
+/**
+*   Alert
+*
+*   Basic alert popup.
+*
+*   @class     .alert
+*   @children
+*   @states
+*   @mutators
+*/
+.alert {
+
+  /**
+  *   .alert
+  *
+  *   Main style.
+  */
+  & {
+    bottom 1rem
+    right 1rem
+    z-index 1000
+    position fixed
+    padding 0 !important
+
+    +below('s') {
+      right 0
+      width 100%
+    }
+  }
+
+/**
+*   Children
+*/
+@import "children/card.styl";
+
+}

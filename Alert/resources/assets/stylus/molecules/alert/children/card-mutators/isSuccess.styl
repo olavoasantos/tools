@@ -1,0 +1,31 @@
+/**
+*   Success
+*
+*   @class     &.is-success
+*/
+&.is-success {
+
+  /**
+  *   &.is-success
+  *
+  *   Main style.
+  */
+  & {
+    background-color _green
+  }
+
+  /**
+  *   .is-success:hover
+  *
+  *   Hovered style
+  */
+  &:hover {
+    box-shadow 0 0 10px _green
+  }
+
+  /**
+  *   Children
+  */
+  @import "isSuccess-children/iconWrapper.styl";
+
+}

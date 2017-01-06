@@ -1,0 +1,63 @@
+/**
+*   Alert card
+*
+*   @class     & .card
+*/
+& .alert-card {
+
+  /**
+  *   & .card
+  *
+  *   Main style.
+  */
+  & {
+    display flex
+    max-width 50vh
+    color _light-l2
+    margin .50rem 0
+    min-width 25rem
+    user-select none
+    align-items center
+    background-color _primary
+    align-content space-between
+
+    +below('s') {
+      max-width auto
+    }
+  }
+
+    /**
+    *   .card:last-child
+    *
+    *   Last child style.
+    */
+    &:last-child {
+      margin 0
+    }
+
+  /**
+  *   .alert:hover
+  *
+  *   It sets the style of the hovered state
+  */
+  &:hover {
+    cursor default
+    box-shadow 0 0 10px _primary-l1
+  }
+
+  /**
+  *   Children
+  */
+  @import "card-children/message.styl";
+  @import "card-children/hightlight.styl";
+  @import "card-children/iconWrapper.styl";
+
+  /**
+  *   Mutators
+  */
+  @import "card-mutators/isInfo.styl";
+  @import "card-mutators/isDanger.styl";
+  @import "card-mutators/isSuccess.styl";
+  @import "card-mutators/isWarning.styl";
+
+}
